@@ -1,7 +1,5 @@
 package Lesson3_homework;
 
-import Lesson3_homework.Employee;
-
 import java.util.Arrays;
 
 public class Homework3Advance
@@ -65,22 +63,22 @@ public class Homework3Advance
 
         System.out.println("Первый");
         emp1.crashArt(10);
-        System.out.println(emp1.artCountCrash);
-        System.out.println(wh1.getArtCountWarehouse() + "\n");
+        System.out.println("Испортил сотрудник " + emp1.employeeName + ": " + emp1.artCountCrash);
+        System.out.println("Осталось на складе: " + wh1.getArtCountWarehouse() + "\n");
 
         System.out.println("Второй");
         emp2.crashArt(11);
-        System.out.println(emp2.artCountCrash);
-        System.out.println(wh1.getArtCountWarehouse() + "\n");
+        System.out.println("Испортил сотрудник " + emp2.employeeName + ": " + emp2.artCountCrash);
+        System.out.println("Осталось на складе: " + wh1.getArtCountWarehouse() + "\n");
 
         System.out.println("Третий");
         emp3.crashArt(30);
-        System.out.println(emp3.artCountCrash);
-        System.out.println(wh1.getArtCountWarehouse() + "\n");
+        System.out.println("Испортил сотрудник " + emp3.employeeName + ": " + emp3.artCountCrash);
+        System.out.println("Осталось на складе: " + wh1.getArtCountWarehouse() + "\n");
     }
 
     public static void task1(double increment, double result) {
-        Integer count = 0;
+        int count = 0;
         if (increment > 0) {
             while (result <= 1000000) {
                 result += increment;
@@ -88,15 +86,13 @@ public class Homework3Advance
             }
             System.out.println("Количество итераций: " + count);
         }
-        return;
     }
 
     public static void task2(Integer[] testArray) {
-        Integer count = 0;
 
         System.out.println("Массив до: " + Arrays.toString(testArray));
 
-        for (Integer i = 0; i < testArray.length; i++) {
+        for (int i = 0; i < testArray.length; i++) {
             if (i % 2 == 0) {
                 testArray[i] = 0;
             }
@@ -106,8 +102,8 @@ public class Homework3Advance
     }
 
     public static void task3(boolean hasFuel, boolean hasElectricsProblem, boolean hasMotorProblem, boolean hasTransmissionProblem, boolean hasWheelsProblem) {
-        Double cost = 0.0;
-        Integer count = 0;
+        double cost = 0.0;
+        int count = 0;
 
         if (!hasFuel && !hasElectricsProblem && !hasMotorProblem && !hasTransmissionProblem && !hasWheelsProblem) {
             cost += 1000;
